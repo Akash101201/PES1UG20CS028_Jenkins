@@ -22,12 +22,9 @@ pipeline {
     }
 
     post {
-        always {
-            script {
-                if (currentBuild.result == 'FAILURE') {
+        failure{  
                     echo 'pipeline failed'
                 }
             }
-        }
-    }
-}
+       
+
